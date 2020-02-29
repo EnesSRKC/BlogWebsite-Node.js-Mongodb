@@ -7,7 +7,7 @@ const session = require('express-session');
 const methodOverride = require('method-override');
 const app = express();
 const port = process.env.PORT || 3000;
-const hostname = 'https://heroku-blogsite.herokuapp.com';
+const hostname = 'heroku-blogsite.herokuapp.com';
 
 mongoose.connect('mongodb://127.0.0.1/nodeblog_db', {
   useNewUrlParser: true,
@@ -88,4 +88,4 @@ app.use('/admin', admin);
 
 
 
-app.listen(port, hostname, () => console.log(`Example app listening on this url http://${hostname}:${port}`));
+app.listen(port, () => console.log(`Example app listening on this url http://${hostname}:${port}`));
